@@ -44,10 +44,7 @@ fn main(_argc: isize, _argv: *const *const u8) -> isize {
     
     loop {
         // 現在のV-Blank，V-DrawSkipが終わるまでスキップ
-        while(*REG_DISPLAY_VCOUNT >= 160){};
-
-        // クロスコンパイルしたときのデバッグどうすればええのん？？
-        
+        while(*REG_DISPLAY_VCOUNT >= 160){};        
         //while(*REG_DISPLAY_VCOUNT < 160){};
 
         key_state = (!(*REG_KEY_INPUT)) & KEY_ANY;

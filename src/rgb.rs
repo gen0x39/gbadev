@@ -10,6 +10,7 @@ pub trait RGBDef {
     fn red() -> Self;
     fn green() -> Self;
     fn blue() -> Self;
+    fn magenta() -> Self;
 }
 
 impl RGBDef for RGB {
@@ -27,5 +28,8 @@ impl RGBDef for RGB {
     }
     fn blue() -> RGB {
         return RGB{ r:0x00, g:0x00, b:0x1F };
+    }
+    fn magenta() -> RGB {
+        return RGB{ r:0x1F, g:0x00, b:0x1F };
     }
 }
